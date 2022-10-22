@@ -77,17 +77,22 @@ main {
     padding-left: 20px;
 }
 
+.aboutme p {
+    margin: 20px 0;
+}
+
 .work rightcontent {
     padding-left: 20px;
     flex:2;
     display: flex;
+    flex-direction: column;
 }
 .work showcase {
     height: 500px;
-    flex: 1 1;
     border: 5px solid rgb(0, 77, 128);
     position: relative;
     display: flex;
+    margin-bottom: 10px;
 }
 
 .work showcase .imageanchor{
@@ -97,7 +102,7 @@ main {
     opacity: .4;
 }
 
-.work showcase .titleanchor {
+.work .titleanchor {
     position: absolute;
     bottom: 20px;
     z-index: 1;
@@ -114,6 +119,72 @@ main {
     bottom: 20px;
     z-index: 1;
 }
+
+.work otherwork {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.work otherwork workitem{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    border: 5px solid rgb(0, 77, 128);
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.work otherwork .imageanchor{
+    flex: 1;
+    background-size: cover;
+    opacity: .4;
+}
+
+.work otherwork h3 {
+    font-size: 20px;
+    color: white;
+    width: 115px;
+    background: rgb(0, 77, 128);
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+}
+/*Custom styling for each work item*/
+.work otherwork #workitem1 .imageanchor{
+    background-image: url("../images/HoriseonSS.PNG");
+}
+
+.work otherwork #workitem1 h3{
+    padding: 15px;
+    padding-right: 0px;
+}
+
+.work otherwork #workitemcomingsoon .imageanchor{
+    background-image: url("../images/ComingSoon.png");
+}
+.work otherwork #workitemcomingsoon h3{
+    padding: 15px;
+    padding-right: 0px;
+}
+
+.contactme rightcontent {
+    height: 100px;
+    padding-left: 20px;
+    flex:2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactme h3{
+    color: white;
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 576px) {
     header {
@@ -152,6 +223,10 @@ main {
     .work rightcontent {
         padding-top: 10px;
     }
+
+    .contactme rightcontent{
+        flex-direction: column;
+    }
   }
 
   @media screen and (max-width: 849px) {
@@ -171,5 +246,14 @@ main {
     }
     .work showcase {
         height: 400px;
+    }
+
+    .work otherwork{
+        display: block;
+    }
+
+    .work workitem{
+        margin-bottom: 10px;
+        height: 150px;
     }
   }
