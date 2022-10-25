@@ -142,7 +142,6 @@ Using two columns to start and setting up to be dynamic*/
     flex-wrap: wrap;
     width: 100%;
     gap: 10px;
-    transition: all 0.5s ease-in-out;
 }
                 
 /*Getting the border of each item and setting the size to fill the space*/
@@ -153,6 +152,7 @@ Using two columns to start and setting up to be dynamic*/
     border: 7px solid rgb(0, 77, 128);
     flex: 1 1 45%;
     position: relative;
+    transition: all 0.5s ease-in-out;
 }
 
 /*This handles the background images*/
