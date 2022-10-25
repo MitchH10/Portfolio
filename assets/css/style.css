@@ -1,13 +1,14 @@
 * {
     margin: 0;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: gray;
+    background-color: rgb(68, 68, 68);
 }
 
 p{
     font-size: 18px;
 }
 
+/*Header sizing and formatting using flex to seperate the nav and pic/title div*/
 header {
     width: 100%;
     margin: 0 auto;
@@ -17,7 +18,7 @@ header {
     align-items: flex-end;
     flex-wrap: wrap;
 }
-
+/*Spacing and styling for the image and name*/
 header img {
     width: 150px;
     height: 150px;
@@ -35,6 +36,8 @@ header div h1{
     padding-left: 10px;
     padding-right: 60px;
 }
+
+/*Navigation bar spacing and styling*/
 header nav {
     background: rgb(0, 61, 102);
     display: flex;
@@ -50,12 +53,15 @@ header a {
     border-radius: 10px 0 0 0;
 }
 
+/*Main content*/
 main {
-    background-color: gray;
+    background-color: rgb(68, 68, 68);
     width: 95%;
     margin: auto;
+    color: white;
 }
 
+/*Set up for our two columns to have a title on the left and content on the right*/
 .content{
     margin-top: 20px;
     display: flex;
@@ -66,12 +72,14 @@ main {
     padding-right: 0px;
     border-right: 5px solid rgb(129, 255, 186);
     text-align: right;
+    color: whi
 }
 
 .content lefttitle h2 {
     padding-right: 20px;
 }
 
+/*About me styling*/
 .aboutme rightcontent {
     flex: 2;
     padding-left: 20px;
@@ -81,25 +89,31 @@ main {
     margin: 20px 0;
 }
 
+/*Setting up spacing for work section*/
 .work rightcontent {
     padding-left: 20px;
     flex:2;
     display: flex;
     flex-direction: column;
 }
+
+/*Setting spacing for main showcase work item inorder to fill page and be ready
+to be dynamic*/
 .work showcase {
     height: 500px;
-    border: 5px solid rgb(0, 77, 128);
+    border: 7px solid rgb(0, 77, 128);
     position: relative;
     display: flex;
     margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
 }
 
+/*Here is the setup for the background image with title over top*/
 .work showcase .imageanchor{
     flex: 1;
     background-image: url("../images/CSS-Snippet-Cheatsheet.png");
     background-size: cover;
-    opacity: .4;
+    opacity: .6;
 }
 
 .work .titleanchor {
@@ -118,30 +132,37 @@ main {
     position: absolute;
     bottom: 20px;
     z-index: 1;
+    transition: all 0.5s ease-in-out;
 }
 
+/*Here is the setup for the other work.
+Using two columns to start and setting up to be dynamic*/
 .work otherwork {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     gap: 10px;
+    transition: all 0.5s ease-in-out;
 }
-
+                
+/*Getting the border of each item and setting the size to fill the space*/
 .work otherwork workitem{
     display: flex;
     flex-wrap: wrap;
     height: 200px;
-    border: 5px solid rgb(0, 77, 128);
+    border: 7px solid rgb(0, 77, 128);
     flex: 1 1 45%;
     position: relative;
 }
 
+/*This handles the background images*/
 .work otherwork .imageanchor{
     flex: 1;
     background-size: cover;
-    opacity: .4;
+    opacity: .6;
 }
 
+/*This handles the tittles over top of the images*/
 .work otherwork h3 {
     font-size: 20px;
     color: white;
@@ -151,8 +172,12 @@ main {
     position: absolute;
     bottom: 20px;
     z-index: 1;
+    transition: all 0.5s ease-in-out;
 }
-/*Custom styling for each work item*/
+
+
+/*Custom styling for the work items*/
+/*Specific styling for the first item that has content*/
 .work otherwork #workitem1 .imageanchor{
     background-image: url("../images/HoriseonSS.PNG");
 }
@@ -162,6 +187,7 @@ main {
     padding-right: 0px;
 }
 
+/*styling for all the coming soon items*/
 .work otherwork #workitemcomingsoon .imageanchor{
     background-image: url("../images/ComingSoon.png");
 }
@@ -185,7 +211,27 @@ main {
     text-decoration: underline;
 }
 
+/*Here is setting a shadow on the showcase item and also extenting the title box on hover*/
+showcase:hover {
+    box-shadow: inset 0px 0px 20px 20px rgb(0, 77, 128);
+}
 
+showcase:hover a h3{
+    width: 250px;
+    text-align: center;
+}
+/*The same hover styling for the otherwork items*/
+otherwork workitem:hover {
+    box-shadow: inset 0px 0px 20px 20px rgb(0, 77, 128);
+}
+
+otherwork workitem:hover a h3{
+    width: 200px;
+    text-align: center;
+}
+
+/*This handles the screen size changing, it stacks the header items
+as the screen shrinks and also stacks the work section and contact section*/
 @media screen and (max-width: 576px) {
     header {
         flex-direction: column;
