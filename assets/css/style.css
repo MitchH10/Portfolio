@@ -111,7 +111,7 @@ to be dynamic*/
 /*Here is the setup for the background image with title over top*/
 .work showcase .imageanchor{
     flex: 1;
-    background-image: url("../images/CSS-Snippet-Cheatsheet.png");
+    background-image: url("../images/NPS-Locator.png");
     background-size: cover;
     opacity: .6;
 }
@@ -175,25 +175,33 @@ Using two columns to start and setting up to be dynamic*/
     transition: all 0.5s ease-in-out;
 }
 
+.work otherwork workitem h3{
+    padding: 15px;
+    padding-right: 0px;
+}
 
 /*Custom styling for the work items*/
 /*Specific styling for the first item that has content*/
 .work otherwork #workitem1 .imageanchor{
+    background-image: url("../images/CSS-Snippet-Cheatsheet.png");
+}
+
+.work otherwork #workitem2 .imageanchor{
     background-image: url("../images/HoriseonSS.PNG");
 }
 
-.work otherwork #workitem1 h3{
-    padding: 15px;
-    padding-right: 0px;
+.work otherwork #workitem3 .imageanchor{
+    background-image: url("../images/Password-Generator.png");
 }
+
+.work otherwork #workitem4 .imageanchor{
+    background-image: url("../images/Work-Day-Planner.png");
+}
+
 
 /*styling for all the coming soon items*/
 .work otherwork #workitemcomingsoon .imageanchor{
     background-image: url("../images/ComingSoon.png");
-}
-.work otherwork #workitemcomingsoon h3{
-    padding: 15px;
-    padding-right: 0px;
 }
 
 .contactme rightcontent {
