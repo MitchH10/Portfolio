@@ -111,7 +111,7 @@ to be dynamic*/
 /*Here is the setup for the background image with title over top*/
 .work showcase .imageanchor{
     flex: 1;
-    background-image: url("../images/NPS-Locator.png");
+    background-image: url("../images/Pawfriends.png");
     background-size: cover;
     opacity: .6;
 }
@@ -183,7 +183,7 @@ Using two columns to start and setting up to be dynamic*/
 /*Custom styling for the work items*/
 /*Specific styling for the first item that has content*/
 .work otherwork #workitem1 .imageanchor{
-    background-image: url("../images/CSS-Snippet-Cheatsheet.png");
+    background-image: url("../images/NPS-Locator.png");
 }
 
 .work otherwork #workitem2 .imageanchor{
@@ -196,6 +196,14 @@ Using two columns to start and setting up to be dynamic*/
 
 .work otherwork #workitem4 .imageanchor{
     background-image: url("../images/Work-Day-Planner.png");
+}
+
+.work otherwork #workitem5 .imageanchor{
+    background-image: url("../images/CSS-Snippet-Cheatsheet.png");
+}
+
+.work otherwork #workitem6 .imageanchor{
+    background-image: url("../images/ComingSoon.png");
 }
 
 
